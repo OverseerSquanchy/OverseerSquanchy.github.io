@@ -2,11 +2,11 @@ function getStatus(status) {
     if (typeof status === "undefined") return;
     const currentDay = new Date().getDay();
     const currentHour = new Date().getHours();
-    // if (currentDay === 0 || currentDay === 6) {
-    //   return "WEEKEND";
-    // } else if (currentHour < 8 || currentHour > 17) {
-    //   return "WEEKEND";
-    // } else
+    if (currentDay === 0 || currentDay === 6) {
+      return "WEEKEND";
+    } else if (currentHour < 8 || currentHour > 17) {
+      return "WEEKEND";
+    } else
     if (status) {
         return "OFFICE";
     } else {
